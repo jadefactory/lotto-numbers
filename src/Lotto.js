@@ -1,4 +1,117 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
+const Title = styled.div`
+  font-size: 75px;
+  text-align: center;
+  color: gold;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px black;
+
+  @media (max-width: 720px) {
+    font-size: 40px;
+  }
+  @media (max-width: 980px) {
+    font-size: 50px;
+  }
+`;
+
+const NumberContainer = styled.div`
+  width: 700px;
+  height: 100px;
+  display: flex;
+  margin: 0 auto;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @media (max-width: 720px) {
+    width: 100vw;
+    height: 50px;
+  }
+`;
+
+const NumberBall = styled.div`
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  border-radius: 50%;
+  background-color: orange;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 36px;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px black;
+  color: #fff;
+
+  &:nth-child(1),
+  &:nth-child(2) {
+    background-color: #ff7272;
+  }
+  &:nth-child(3),
+  &:nth-child(4) {
+    background-color: #fbc400;
+  }
+  &:nth-child(5),
+  &:nth-child(6) {
+    background-color: #b0d840;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (max-width: 720px) {
+    width: 50px;
+    height: 50px;
+
+    font-size: 24px;
+    margin-right: 10px;
+
+    &:first-child {
+      margin-left: auto;
+    }
+    &:last-child {
+      margin-right: auto;
+    }
+  }
+`;
+
+const GeneratorButton = styled.div`
+  width: 200px;
+  height: 50px;
+  background-color: #51cf66;
+
+  border-radius: 10px;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 1px 2px black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  @media (max-width: 720px) {
+    bottom: 150px;
+  }
+`;
 
 const Lotto = () => {
   let numbers = [];
@@ -13,13 +126,18 @@ const Lotto = () => {
     numbers.push(number);
   }
   numbers.sort((a, b) => a - b);
-  console.log(numbers);
 
   return (
     <>
-      {numbers.map((num) => (
-        <h1>{num}</h1>
-      ))}
+      <Title>Lotto Number Generator</Title>
+      <NumberContainer>
+        {numbers.map((num) => (
+          <NumberBall key={num}>{num}</NumberBall>
+        ))}
+      </NumberContainer>
+      <GeneratorButton>
+        <Link to="/">새로운 번호 추출하기</Link>
+      </GeneratorButton>
     </>
   );
 };
