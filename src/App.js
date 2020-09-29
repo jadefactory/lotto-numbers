@@ -6,7 +6,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background-color: royalblue;
+    background-color: #000;
   }
 `;
 

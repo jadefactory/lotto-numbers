@@ -9,9 +9,9 @@ const Title = styled.div`
   margin-top: 150px;
   margin-bottom: 100px;
   font-weight: 600;
-  text-shadow: 1px 1px 2px black;
 
   @media (max-width: 720px) {
+    margin-top: 100px;
     font-size: 40px;
   }
   @media (max-width: 980px) {
@@ -41,7 +41,7 @@ const NumberBall = styled.div`
   height: 100px;
   margin-right: 20px;
   border-radius: 50%;
-  background-color: orange;
+  background: radial-gradient(circle at 25px 25px, #fcc419, rgba(0, 0, 0, 0.8));
 
   display: flex;
   align-items: center;
@@ -52,7 +52,7 @@ const NumberBall = styled.div`
   text-shadow: 1px 1px 2px black;
   color: #fff;
 
-  &:nth-child(1),
+  /* &:nth-child(1),
   &:nth-child(2) {
     background-color: #ff7272;
   }
@@ -63,7 +63,7 @@ const NumberBall = styled.div`
   &:nth-child(5),
   &:nth-child(6) {
     background-color: #b0d840;
-  }
+  } */
   &:last-child {
     margin-right: 0;
   }
@@ -87,7 +87,7 @@ const NumberBall = styled.div`
 const GeneratorButton = styled.div`
   width: 200px;
   height: 50px;
-  background-color: #51cf66;
+  background-color: gold;
 
   border-radius: 10px;
   position: absolute;
@@ -105,11 +105,11 @@ const GeneratorButton = styled.div`
 
   a {
     text-decoration: none;
-    color: #fff;
+    color: #000;
   }
 
   @media (max-width: 720px) {
-    bottom: 150px;
+    bottom: 100px;
   }
 `;
 
