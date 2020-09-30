@@ -50,20 +50,8 @@ const NumberBall = styled.div`
   font-size: 36px;
   font-weight: 600;
   text-shadow: 1px 1px 2px black;
-  color: #fff;
+  color: #fff9db;
 
-  /* &:nth-child(1),
-  &:nth-child(2) {
-    background-color: #ff7272;
-  }
-  &:nth-child(3),
-  &:nth-child(4) {
-    background-color: #fbc400;
-  }
-  &:nth-child(5),
-  &:nth-child(6) {
-    background-color: #b0d840;
-  } */
   &:last-child {
     margin-right: 0;
   }
