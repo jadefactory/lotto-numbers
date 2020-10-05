@@ -9,6 +9,7 @@ const Title = styled.div`
   margin-top: 150px;
   margin-bottom: 100px;
   font-weight: 600;
+  text-shadow: 0 0 5px gold;
 
   @media (max-width: 720px) {
     margin-top: 100px;
@@ -41,7 +42,7 @@ const NumberBall = styled.div`
   height: 100px;
   margin-right: 20px;
   border-radius: 50%;
-  background: radial-gradient(circle at 25px 25px, #fcc419, rgba(0, 0, 0, 0.8));
+  background: radial-gradient(circle at 20px 20px, #fcc419, rgba(0, 0, 0, 0.8));
 
   display: flex;
   align-items: center;
